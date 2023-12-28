@@ -10,11 +10,3 @@ module.exports = async function (context, req) {
     };
   };
 
-  async function getUser() {
-    const response = await fetch('/api/user');
-    const payload = await response.json();
-    const { clientPrincipal } = payload;
-    return clientPrincipal;
-  }
-  
-  console.log(await getUser());
